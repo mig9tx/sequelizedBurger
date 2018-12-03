@@ -17,7 +17,7 @@ module.exports = function (app) {
                 burgers: dbBurger
             };
             res.render("index", hbsObject);
-            console.log(dbBurger);
+            console.log(res);
             
         }).catch (function(error){
             console.log(error);
@@ -28,7 +28,7 @@ module.exports = function (app) {
         console.log(req.body);
         db.Burger.create({
             burger_name: req.body.burger_name,
-            devoured: req.body.devoured
+            devoured: req.body.devoured,
         }).then(function (dbBurger) {
             res.json(dbBurger);
         });
