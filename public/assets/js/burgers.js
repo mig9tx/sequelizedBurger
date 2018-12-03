@@ -1,5 +1,3 @@
-//
-
 $(function(){
     $(".devour").on("click", function(event) {
         let id = $(this).attr("data-id");
